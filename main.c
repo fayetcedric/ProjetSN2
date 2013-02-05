@@ -3,9 +3,9 @@
 
 void main(void)
 {
+	/* Boucle de travail : */
 	while(1)
 	{
 		
 	}
-	return EXIT_SUCCESS;
 }
