@@ -3,5 +3,6 @@
 
 void main(void)
 {
-	
+
+	return EXIT_SUCCESS;
 }
