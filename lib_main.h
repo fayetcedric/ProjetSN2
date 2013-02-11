@@ -11,5 +11,6 @@ Derniere modification:
 #define LIB_MAIN_H
 
 void  fct_init_VariablesGlobales(); // Fonctions initialisant les variables globales
+void fct_init_TimerDuMain();
 
 #endif
