@@ -1,3 +1,12 @@
-#define EXIT_SUCCESS 1
-#define EXIT_FAILURE 0
-#define EXIT_ERROR -1
+/*
+constance.h
+Crée par Cédric Fayet le 11 février 2013
+Derniere modification :
+Fichier contenant les différentes constantes pré-processeur
+*/
+
+#ifndef __CONSTANCE_H
+#define __CONSTANCE_H
+
+
+#endif
