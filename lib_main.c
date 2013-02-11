@@ -27,7 +27,7 @@ void  fct_init_VariablesGlobales()
 
 void fct_init_TimerDuMain()
 {
-  
-  
+    APMC_PCER=(1<<TC0_ID);
+    TC0_RC=TIME_PERIOD_TIMERDUMAIN;
 }
 
