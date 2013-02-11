@@ -5,6 +5,12 @@ Derniere modification
 Fichier de descritpion datation
 */
 
+#ifndef __DATATION_H
+#define __DATATION_h
+
 #include <91M55800.h>
+
 #include "global.h"
 #include "constane.h"
+
+#endif
