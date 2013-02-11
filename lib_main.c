@@ -1,5 +1,5 @@
 /*
-lib_main.h
+lib_main.c
 Crée par Cédric Fayet le 11 février 2013
 Derniere modification:
 */
