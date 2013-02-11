@@ -1,22 +1,26 @@
 #include "datation.h"
 
-
 //Initialisation et démarrage du RTC
 
 void fct_init_RTC(void)
 {
-  int value_DH;  //Variable locale pour les dizaines d'heures
-  int value_UH;	//Variable locale pour les unités d'heures
-  int value_DM;	//Variable locale pour les dizaines de minutes
-  int value_UM;	//Variable locale pour les unités de minutes
-  int value_DS;	//Variable locale pour les dizaines de secondes
-  int value_US;	//Variable locale pour les unités de secondes
+  int value_Heures_Dizaines=value_Heures/10; //Variable locale pour les dizaines d'heures
+  int value_Heures_Unites=value_Heures%10; //Variable locale pour les unités d'heures
+  int value_Minutes_Dizaines=value_Minutes/10; //Variable locale pour les dizaines de minutes
+  int value_Minutes_Unites=value_Minutes%10;	//Variable locale pour les unités de minutes
+  int value_Secondes_Dizaines=value_Secondes/10;	//Variable locale pour les dizaines de secondes
+  int value_Secondes_Unites=value_Secondes%10;	//Variable locale pour les unités de secondes
 
   RTC_MR = (1<<0);
   RTC_HMR = (0<<0);
-  RTC_TIMR = (0<<22)|(value_DH<<20)|(value_UH<<16)|(value_DM<<12)|(value_UM<<8)|(value_DS<<4)|(value_US<<0);
+  RTC_TIMR = (0<<22)
+            |(value_Heures_Dizaines<<20)
+            |(value_Heures_Unites<<16)
+            |(value_Minutes_Dizaines<<12)
+            |(value_Minutes_Unites<<8)
+            |(value_Secondes_Dizaines<<4)
+            |(value_Secondes_Unites<<0);
 }
-
 
 void fct_start_RTC(void)
 {
@@ -25,7 +29,14 @@ void fct_start_RTC(void)
 
 void fct_read_RTC(void)
 {
-  value_Heures=(RTC_TIMR)*10 + RTC_TIMR
-  value_Minutes=
-  value_Secondes=
+  int value_Heures_Dizaines=(RTC_TIMR & 3<<20);
+  int value_Heures_Unites=(RTC_TIMR & 15<<16);
+  int value_Minutes_Dizaines=(RTC_TIMR & 7<<12);
+  int value_Minutes_Unites=(RTC_TIMR & 15<<8);
+  int value_Secondes_Dizaines=(RTC_TIMR & 7<<4);
+  int value_Secondes_Unites=(RTC_TIMR & 15<<0);
+  
+  value_Heures=value_Heures_Dizaines*10 + value_Heures_Unites;
+  value_Minutes=value_Minutes_Dizaines*10 + value_Minutes_Unites;
+  value_Secondes=value_Secondes_Dizaines*10 + value_Secondes_Unites;
 }
