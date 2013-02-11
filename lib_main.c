@@ -30,7 +30,6 @@ void fct_init_TimerDuMain()
             TC_CPCTRG;
             
     TC0_IER=TC_CPCS;
-    
 }
 
 void fct_init_AIC()
@@ -50,5 +49,6 @@ void fct_start_TimerDuMain()
 
 void fct_irq_IncremCptTimer0()
 {
-  
+  if(cpt_TIMER0 == 0xFFFF)cpt_TIMER0=0;
+  cpt_TIMER0++;
 }
