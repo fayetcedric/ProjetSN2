@@ -4,12 +4,12 @@
 
 void fct_init_RTC(void)
 {
-  int value_Heures_Dizaines=value_Heures/10; //Variable locale pour les dizaines d'heures
-  int value_Heures_Unites=value_Heures%10; //Variable locale pour les unités d'heures
-  int value_Minutes_Dizaines=value_Minutes/10; //Variable locale pour les dizaines de minutes
-  int value_Minutes_Unites=value_Minutes%10;	//Variable locale pour les unités de minutes
-  int value_Secondes_Dizaines=value_Secondes/10;	//Variable locale pour les dizaines de secondes
-  int value_Secondes_Unites=value_Secondes%10;	//Variable locale pour les unités de secondes
+  int value_Heures_Dizaines=value_Heures/10;
+  int value_Heures_Unites=value_Heures%10;
+  int value_Minutes_Dizaines=value_Minutes/10;
+  int value_Minutes_Unites=value_Minutes%10;
+  int value_Secondes_Dizaines=value_Secondes/10;
+  int value_Secondes_Unites=value_Secondes%10;
 
   RTC_MR = (1<<0);
   RTC_HMR = (0<<0);
