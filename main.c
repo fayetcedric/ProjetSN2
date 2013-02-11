@@ -5,12 +5,13 @@
 
 void main(void)
 {
-	/* Initialisation des fonctions du main : */
+	/* Initialisation */
+	
 	
 	init_TimerDuMain();
 	init_ChienDeGarde();
 	
-	/* Boucle de travail : */
+	/* Boucle de travail */
 	while(1)
 	{		
 		if(flag_Pluviometrie)
