@@ -17,10 +17,11 @@ int cpt_ChienDeGarde;
 
 void main(void)
 {
-	/* Boucle de travail : */
+	/* Initialisation des fonctions du main : */
 	
 	initTIMER_Main();
 	
+	/* Boucle de travail : */
 	while(1)
 	{
 		cpt_ChienDeGarde = 0;
