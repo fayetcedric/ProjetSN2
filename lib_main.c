@@ -1,3 +1,9 @@
+/*
+lib_main.h
+Crée par Cédric Fayet le 11 février 2013
+Derniere modification:
+*/
+
 #include"lib_main.h"
 
 void  fct_init_VariablesGlobales()
