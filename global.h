@@ -21,7 +21,7 @@ extern int value_Heures;
 extern int value_Minutes;
 extern int value_Secondes;
 
-extern int cpt_TIMER0;
+extern unsigned int cpt_TIMER0;
 
 
 
