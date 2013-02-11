@@ -42,7 +42,7 @@ void fct_read_RTC(void)
   int value_Secondes_Dizaines=(RTC_TIMR & 7<<4);
   int value_Secondes_Unites=(RTC_TIMR & 15<<0);
   
-  value_Heures=value_Heures_Dizaines*10 + value_Heures_Unites;
-  value_Minutes=value_Minutes_Dizaines*10 + value_Minutes_Unites;
-  value_Secondes=value_Secondes_Dizaines*10 + value_Secondes_Unites;
+  value_Heures=((value_Heures_Dizaines*10)>>4 + value_Heures_Unites)>>16;
+  value_Minutes=((value_Minutes_Dizaines*10)>>4 + value_Minutes_Unites)>>8;
+  value_Secondes=((value_Secondes_Dizaines*10)>>4 + value_Secondes_Unites)>>0;
 }
