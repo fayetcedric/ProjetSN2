@@ -5,6 +5,9 @@ Dernier modification :
 Fichier contenant les variables et fonctions globales 
 */
 
+#ifndef __GLOBAL_H
+#define GLOBAL_H
+
 /* Fonctions globales : */
 
 /* Constantes globales : */
@@ -20,3 +23,5 @@ extern int value_Pluviometrie;
 extern int value_Heures;
 extern int value_Minutes;
 extern int value_Secondes;
+
+#endif
