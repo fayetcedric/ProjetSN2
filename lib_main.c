@@ -9,11 +9,6 @@ Derniere modification:
 void  fct_init_VariablesGlobales()
 {
   extern int flag_DemandeUtilisateur = 0;
-  
-  //Initialement on effectue toutes les mesures.
-  extern int flag_DemandeTemperature = 1;
-  extern int flag_DemandeVitesseVent = 1;
-  extern int flag_DemandePluviometrie = 1;
 
   //Initialement on affecte toutes les variables globales à zéro.
   extern int value_Temperature=0;
