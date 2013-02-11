@@ -24,5 +24,16 @@ void fct_init_TimerDuMain()
 {
     APMC_PCER=(1<<TC0_ID);
     TC0_RC=TIME_PERIOD_TIMERDUMAIN;
+    
 }
 
+void fct_init_AIC()
+{
+  AIC_SMR6=AIC_PRIOR|AIC_SRCTYPE_INT_EDGE_TRIGGER;
+  AIC_SVR6=(int)fct_irq_IncremCptTimer0;
+  AIC_IECR=(1<<TC0_ID);
+}
+
+void fct_init_TimerDuMain();
+void fct_start_TimerDuMain();
+void fct_irq_IncremCptTimer0();
