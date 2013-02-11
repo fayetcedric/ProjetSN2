@@ -6,7 +6,7 @@ Fichier de descritpion datation
 */
 
 #ifndef __DATATION_H
-#define __DATATION_h
+#define __DATATION_H
 
 #include <91M55800.h>
 
