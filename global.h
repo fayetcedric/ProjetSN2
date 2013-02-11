@@ -2,9 +2,7 @@
 global.h
 Crée par Cédric Fayet le 11 février 2013
 Dernier modification : 
-Fichier contenant les
-
-
+Fichier contenant les variables et fonctions globales 
 */
 
 /* Fonctions globales : */
