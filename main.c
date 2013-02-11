@@ -13,19 +13,16 @@ int value_Temperature; // Température est comprise entre -55° et 150°
 int value_VitesseVent;
 int value_Pluviometrie;
 
-int cpt_ChienDeGarde;
-
 void main(void)
 {
 	/* Initialisation des fonctions du main : */
 	
-	initTIMER_Main();
+	init_TimerDuMain();
+	init_ChienDeGarde();
 	
 	/* Boucle de travail : */
 	while(1)
-	{
-		cpt_ChienDeGarde = 0;
-		
+	{		
 		if(flag_Pluviometrie)
 		{
 				
