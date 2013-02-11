@@ -9,9 +9,9 @@ void main(void)
 {
 	/* Initialisation */
 	
-	
-	init_TimerDuMain();
-	init_ChienDeGarde();
+	fct_init_VariablesGlobales();
+	fct_init_TimerDuMain();
+	fct_init_ChienDeGarde();
 	
 	/* Boucle de travail */
 	while(1)
