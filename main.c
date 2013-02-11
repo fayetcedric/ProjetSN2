@@ -1,6 +1,6 @@
 #include <91M55800.h>
 
-#include "contante.h"
+#include "constante.h"
 #include "global.h"
 
 #include "lib_main.h"
