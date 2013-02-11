@@ -20,6 +20,18 @@ void main(void)
 	/* Boucle de travail */
 	while(1)
 	{		
-
+		if()
+		{
+			
+		}
+		
+		if(!(cpt_TIMER0%))
+		{
+			
+		}
+		
+		if(flag_DemandeUtilisateur)
+		{
+		}
 	}
 }
