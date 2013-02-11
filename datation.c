@@ -1,7 +1,7 @@
 /*
 datation.c
-Crée par Matthieu Biach le 11 février 2013
-Derniere modification:
+Crée par Matthieu Biache et Quentin Viotto le 11 février 2013
+Derniere modification: 11 février 2013
 */
 
 #include "datation.h"
