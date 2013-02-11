@@ -8,5 +8,6 @@ Fichier contenant les différentes constantes pré-processeur
 #ifndef __CONSTANCE_H
 #define __CONSTANCE_H
 
+#define TIME_PERIOD_TIMERDUMAIN 5000 //ms
 
 #endif
