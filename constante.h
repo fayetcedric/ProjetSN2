@@ -10,5 +10,7 @@ Fichier contenant les différentes constantes pré-processeur
 
 #define CLK_TIMERDUMAIN TC_CLKS_32 //cadence
 #define TIME_PERIOD_TIMERDUMAIN 5000 //période
+#define TIMER0_PERIOD_CALCPLUIE 10// nb de période où on calcul pluie
+#define TIMER0_PERIOD_CALCVENT 12// nb de période où on calcul vent
 
 #endif
