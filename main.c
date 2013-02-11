@@ -16,24 +16,6 @@ void main(void)
 	/* Boucle de travail */
 	while(1)
 	{		
-		if(flag_Pluviometrie)
-		{
-				
-		}
-		
-		if(flag_DemandeVitesseVent)
-		{
-				
-		}
-		
-		if(flag_DemandeTemperature)
-		{
-				
-		}
-		
-		if(flag_DemandeUtilisateur)
-		{
-				
-		}
+
 	}
 }
