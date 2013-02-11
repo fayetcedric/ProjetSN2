@@ -12,8 +12,8 @@ void main(void)
 	fct_init_VariablesGlobales();
 	fct_init_TimerDuMain();
 	fct_init_ChienDeGarde();
-	
 	void fct_init_AIC();
+	
 	void fct_start_TimerDuMain();
 	
 	
