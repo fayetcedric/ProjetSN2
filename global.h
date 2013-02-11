@@ -19,6 +19,6 @@ extern int value_Temperature; // Température est comprise entre -55° et 150°
 extern int value_VitesseVent;
 extern int value_Pluviometrie;
 
-extern int value_Heure;
+extern int value_Heures;
 extern int value_Minutes;
 extern int value_Secondes;
