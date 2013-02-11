@@ -1,3 +1,4 @@
+#include"lib_main.h"
 
 void  fct_init_VariablesGlobales()
 {
@@ -17,3 +18,10 @@ void  fct_init_VariablesGlobales()
   extern int value_Minutes=0;
   extern int value_Secondes=0;
 }
+
+void fct_init_TimerDuMain()
+{
+  
+  
+}
+
