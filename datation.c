@@ -1,3 +1,9 @@
+/*
+lib_main.h
+Crée par Matthieu Biach le 11 février 2013
+Derniere modification:
+*/
+
 #include "datation.h"
 
 //Initialisation et démarrage du RTC
