@@ -1,7 +1,7 @@
 /*
 lib_main.c
 Crée par Cédric Fayet le 11 février 2013
-Derniere modification:
+Derniere modification: le 12 février 2013 par Cédric Fayet
 */
 
 #include"lib_main.h"
