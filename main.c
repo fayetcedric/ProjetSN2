@@ -4,7 +4,7 @@
 #include "global.h"
 
 #include "lib_main.h"
- // GESTION APMC !!!
+ // GESTION APMC & usart 0!!!
 void main(void)
 {
 	/* Initialisation */
