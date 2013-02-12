@@ -25,56 +25,37 @@ void fct_loadchar_USART1(char Character)
   {
   }
   US1_THR = (int) Character;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1);
+}
+
+void fct_loadvaleur_USART1(int Valeur)
+{
+  while(!((US1_CSR & US_ENDTX)>>4))
+  {
+  }
+  US1_THR = (int) Character;
 }
 
 void fct_initscreen_USART1(void)
 {
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0xA0;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
+  fct_loadchar_USART1(0xA0);
+  flag_Fin_Fct_Usart = 1;
 }
 
 void fct_clearscreen_USART1(void)
 {
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0xA3;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0x01;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
+  fct_loadchar_USART1(0xA3);
+  fct_loadchar_USART1(0x01);
 }
 
 void fct_writeline1_USART1(char* Chaine)
 {
   int indice=0;
   
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0xA1;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0x00;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0x01;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0xA2;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
+  fct_loadchar_USART1(0xA1);
+  fct_loadchar_USART1(0x00);
+  fct_loadchar_USART1(0x01);
+  
+  fct_loadchar_USART1(0xA2);
   
   while(indice!=strlen(Chaine))
   {
@@ -87,26 +68,11 @@ void fct_writeline2_USART1(char* Chaine)
 {
   int indice=0;
   
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0xA1;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0x00;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0x02;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
-  US1_THR = 0xA2;
-  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1)
+  fct_loadchar_USART1(0xA1);
+  fct_loadchar_USART1(0x00);
+  fct_loadchar_USART1(0x02);
+  
+  fct_loadchar_USART1(0xA2);
   
   while(indice!=strlen(Chaine))
   {
