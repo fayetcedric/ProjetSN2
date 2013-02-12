@@ -6,7 +6,12 @@ Derniere modification: le 12 février 2013 par Cédric Fayet
 
 #include"lib_main.h"
 
-void  fct_init_VariablesGlobales()
+void fct_restart_all()
+{
+  AIC_IPR=(1<<1);
+}
+
+void fct_init_VariablesGlobales()
 {
   flag_Telecommande_ReceptionCaractere = 0;
   flag_LCD_CaractereLoad = 0;
