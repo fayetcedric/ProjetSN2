@@ -13,6 +13,7 @@ void main(void)
 	fct_init_TimerDuMain();
 	fct_init_WatchDog()
 	fct_init_AIC();
+	fct_init_USART1();
 	
 	fct_start_TimerDuMain();
 	fct_start_WatchDog();
