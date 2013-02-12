@@ -11,7 +11,7 @@ Fichier contenant les variables et fonctions globales
 /* Fonctions globales : */
 
 /* Constantes globales : */
-extern int flag_Telecommande_RecepetionCaractere;
+extern int flag_Telecommande_ReceptionCaractere;
 extern int flag_LCD_CaractereRecu;
 
 extern int value_Temperature; // Température est comprise entre -55° et 150°
