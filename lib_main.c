@@ -68,9 +68,9 @@ void fct_init_WatchDog()
          WD_RSTEN|// reinitialise le watchdog lorsque celui-ci est plein
          WD_OKEY;// permet de compter
           
-  WD_CMD=CLK_WATCHDOG;// intialize the clk
-  
-}// OKEY 
+  WD_CMR=CLK_WATCHDOG;// intialize the clk
+  WD_CMR=(INIVALUE_WATCHDOG<<2);
+}
 
 void fct_restart_WatchDog()
 {
