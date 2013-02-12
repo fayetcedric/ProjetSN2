@@ -30,8 +30,6 @@ void main(void)
 			
 		}
 		
-		if(flag_DemandeUtilisateur)
-		{
-		}
+		fct_restart_WatchDog();
 	}
 }
