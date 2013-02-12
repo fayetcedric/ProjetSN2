@@ -21,7 +21,7 @@ void main(void)
 	/* Boucle de travail */
 	while(1)
 	{		
-		if(!(cpt_TIMER0%TIMER0_PERIODE_CALCPLUIE))
+		if(!(cpt_TIMER0%TIMER0_PERIODE_CALCTEMP))
 		{
 			
 		}
