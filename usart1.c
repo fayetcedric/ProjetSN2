@@ -19,7 +19,7 @@ void fct_init_USART1(void)
           |US_CHMODE_NORMAL;
 }
 
-void fct_loadchar_USART1(char Character)
+void _fct_loadchar_USART1(char Character)
 {
   while(!((US1_CSR & US_ENDTX)>>4))
   {
@@ -27,7 +27,7 @@ void fct_loadchar_USART1(char Character)
   US1_THR = (int) Character;
 }
 
-void fct_loadvaleur_USART1(int Valeur)
+void _fct_loadvaleur_USART1(int Valeur)
 {
   while(!((US1_CSR & US_ENDTX)>>4))
   {
@@ -37,26 +37,24 @@ void fct_loadvaleur_USART1(int Valeur)
 
 void fct_initscreen_USART1(void)
 {
-  fct_loadvaleur_USART1(0xA0);
-  flag_Fin_Fct_Usart = 1;
+  _fct_loadvaleur_USART1(0xA0);
 }
 
 void fct_clearscreen_USART1(void)
 {
-  fct_loadvaleur_USART1(0xA3);
-  fct_loadvaleur_USART1(0x01);
-  flag_Fin_Fct_Usart = 1;
+  _fct_loadvaleur_USART1(0xA3);
+  _fct_loadvaleur_USART1(0x01);
 }
 
-void fct_writeline1_USART1(char* Chaine)
+void fct_writeline_USART1(char* Chaine, int Ligne)
 {
   int indice=0;
   
-  fct_loadvaleur_USART1(0xA1);
-  fct_loadvaleur_USART1(0x00);
-  fct_loadvaleur_USART1(0x00);
+  _fct_loadvaleur_USART1(0xA1);
+  _fct_loadvaleur_USART1(0x00);
+  _fct_loadvaleur_USART1(Ligne);
   
-  fct_loadvaleur_USART1(0xA2);
+  _fct_loadvaleur_USART1(0xA2);
   
   while(indice!=strlen(Chaine))
   {
@@ -64,41 +62,16 @@ void fct_writeline1_USART1(char* Chaine)
     indice++;
   }
   
-  fct_loadvaleur_USART1(0x00);
-  
-  flag_Fin_Fct_Usart = 1;
-}
-
-void fct_writeline2_USART1(char* Chaine)
-{
-  int indice=0;
-  
-  fct_loadvaleur_USART1(0xA1);
-  fct_loadvaleur_USART1(0x00);
-  fct_loadvaleur_USART1(0x01);
-  
-  fct_loadvaleur_USART1(0xA2);
-  
-  while(indice!=strlen(Chaine))
-  {
-    fct_loadchar_USART1(Chaine[indice]);
-    indice++;
-  }
-  
-  fct_loadvaleur_USART1(0x00);
-  
-  flag_Fin_Fct_Usart = 1;
+  _fct_loadvaleur_USART1(0x00);
 }
 
 void fct_write_USART1(char Character, int Ligne, int Colonne)
 {
-  fct_loadvaleur_USART1(0xA1);
-  fct_loadvaleur_USART1(Colonne);
-  fct_loadvaleur_USART1(Ligne);
+  _fct_loadvaleur_USART1(0xA1);
+  _fct_loadvaleur_USART1(Colonne);
+  _fct_loadvaleur_USART1(Ligne);
 
-  fct_loadvaleur_USART1(0xA2);
-  fct_loadchar_USART1(Character);
-  fct_loadvaleur_USART1(0x00);
-  
-  flag_Fin_Fct_Usart = 1;
+  _fct_loadvaleur_USART1(0xA2);
+  _fct_loadchar_USART1(Character);
+  _fct_loadvaleur_USART1(0x00);
 }
