@@ -64,7 +64,7 @@ void fct_init_AIC()
   //watchdog:
   AIC_SMR12=AIC_PRIOR|
             AIC_SRCTYPE_INT_EDGE_TRIGGER;
-  AIC_SVR12(int)fct_irq_restart_all();
+  AIC_SVR12=(int)fct_irq_restart_all();
   AIC_IECR=(1<<TC12_ID);
   
 }
