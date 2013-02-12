@@ -21,5 +21,6 @@ void fct_initscreen_USART1(void);
 void fct_clearscreen_USART1(void);
 void fct_writeline1_USART1(char* Chaine);
 void fct_writeline2_USART1(char* Chaine);
+void fct_write_USART1(char Character, int Ligne, int Colonne);
 
 #endif
