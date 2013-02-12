@@ -8,16 +8,17 @@ Derniere modification:
 
 void  fct_init_VariablesGlobales()
 {
-  extern int flag_DemandeUtilisateur = 0;
+  flag_Telecommande_ReceptionCaractere = 0;
+  flag_LCD_CaractereRecu = 0;
 
   //Initialement on affecte toutes les variables globales à zéro.
-  extern int value_Temperature=0;
-  extern int value_VitesseVent=0;
-  extern int value_Pluviometrie=0;
+  value_Temperature=0;
+  value_VitesseVent=0;
+  value_Pluviometrie=0;
   
-  extern int value_Heures=0;
-  extern int value_Minutes=0;
-  extern int value_Secondes=0;
+  value_Heures=0;
+  value_Minutes=0;
+  value_Secondes=0;
 }
 
 void fct_init_TimerDuMain()
@@ -51,5 +52,10 @@ void fct_init_AIC()
            
   AIC_SVR6=(int)fct_irq_IncremCptTimer0;
   AIC_IECR=(1<<TC0_ID);
+}
+
+void fct_init_WatchDog()
+{
+  
 }
 
