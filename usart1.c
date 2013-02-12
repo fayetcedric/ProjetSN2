@@ -63,6 +63,9 @@ void fct_writeline1_USART1(char* Chaine)
     fct_loadchar_USART1(Chaine[indice]);
     indice++;
   }
+  
+  fct_loadvaleur_USART1(0x00);
+  
   flag_Fin_Fct_Usart = 1;
 }
 
@@ -81,5 +84,8 @@ void fct_writeline2_USART1(char* Chaine)
     fct_loadchar_USART1(Chaine[indice]);
     indice++;
   }
+  
+  fct_loadvaleur_USART1(0x00);
+  
   flag_Fin_Fct_Usart = 1;
 }
