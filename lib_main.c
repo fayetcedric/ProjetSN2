@@ -61,11 +61,16 @@ void fct_init_AIC()
 
 void fct_init_WatchDog()
 {
-  WD_CMD=CLK_WATCHDOG;
+  WD_OMR=WD_WDEN|// disable watchdog
+          WD_IRQEN|// genere une IT lorsque le watchdog est plein
+          WD_RSTEN|// reinitialise le watchdog lorsque celui-ci est plein
+          WD_OKEY;//
+          
+  WD_CMD=CLK_WATCHDOG;// intialize the clk
+  
 }
 
 void fct_restart_WatchDog()
 {
-  WD_CR=WD_RSTKEY;
+  
 }
-
