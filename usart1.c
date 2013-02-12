@@ -42,7 +42,7 @@ void _fct_loadchar_USART(int Id_Usart, char Character)
   else
   {
     while(!(US0_CSR & US_ENDTX));
-    US0_THR = (int) Character;
+    US0_THR = Character;
   }
 }
 
@@ -55,8 +55,13 @@ void _fct_loadvaleur_USART(int Id_Usart, int Valeur)
   }
   else
   {
+    char* Buff[3];
+    sprintf(Buff,"%s",Valeur);
+    
+    while(!(US1_CSR & US_ENDTX));  
+    US0_THR = Buff[0];
     while(!(US1_CSR & US_ENDTX));
-    US0_THR = Valeur;
+    US0_THR = Buff[1];
   }
 }
 
@@ -88,7 +93,6 @@ void fct_writeline_USART(int Id_Usart, char* Chaine, int Ligne)
 	}
   
 	_fct_loadvaleur_USART(Id_Usart, 0x00);
-	}
 }
 
 void fct_write_USART(int Id_Usart, char Character, int Ligne, int Colonne)
