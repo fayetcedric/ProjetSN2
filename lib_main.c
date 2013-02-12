@@ -43,3 +43,13 @@ void fct_irq_IncremCptTimer0()
   if(cpt_TIMER0 == 0xFFFF)cpt_TIMER0=0;
   cpt_TIMER0++;
 }
+
+void fct_init_AIC()
+{
+  AIC_SMR6=AIC_PRIOR|
+           AIC_SRCTYPE_INT_EDGE_TRIGGER;
+           
+  AIC_SVR6=(int)fct_irq_IncremCptTimer0;
+  AIC_IECR=(1<<TC0_ID);
+}
+
