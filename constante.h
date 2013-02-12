@@ -8,6 +8,8 @@ Fichier contenant les différentes constantes pré-processeur
 #ifndef __CONSTANTE_H
 #define __CONSTANTE_H
 
+#define MODE_DEBUG 1
+
 #define CLK_TIMERDUMAIN TC_CLKS_32 //cadence
 #define TIME_PERIOD_TIMERDUMAIN 5000 //période
 #define TIMER0_PERIOD_CALCTEMP 10// nb de période où on calcul température
