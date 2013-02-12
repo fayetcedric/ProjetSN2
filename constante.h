@@ -13,4 +13,6 @@ Fichier contenant les différentes constantes pré-processeur
 #define TIMER0_PERIOD_CALCPLUIE 10// nb de période où on calcul pluie
 #define TIMER0_PERIOD_CALCVENT 12// nb de période où on calcul vent
 
+#define CLK_WATCHDOG WD_WDCLKS_MCK4096 //horloge du watchdog
+
 #endif
