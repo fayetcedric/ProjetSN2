@@ -9,6 +9,7 @@ Derniere modification: le 12 février 2013 par Cédric Fayet
 void fct_irq_restart_all()
 {
   AIC_IPR=(1<<1);
+  AIC_EOICR=TC12_SR;
 }
 
 void fct_init_VariablesGlobales()
@@ -48,6 +49,7 @@ void fct_irq_IncremCptTimer0()
 {
   if(cpt_TIMER0 == 0xFFFF)cpt_TIMER0=0;
   cpt_TIMER0++;
+  AIC_EOICR=TC6_SR;
 }
 
 void fct_init_AIC()
