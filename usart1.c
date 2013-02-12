@@ -37,46 +37,49 @@ void fct_loadvaleur_USART1(int Valeur)
 
 void fct_initscreen_USART1(void)
 {
-  fct_loadchar_USART1(0xA0);
+  fct_loadvaleur_USART1(0xA0);
   flag_Fin_Fct_Usart = 1;
 }
 
 void fct_clearscreen_USART1(void)
 {
-  fct_loadchar_USART1(0xA3);
-  fct_loadchar_USART1(0x01);
+  fct_loadvaleur_USART1(0xA3);
+  fct_loadvaleur_USART1(0x01);
+  flag_Fin_Fct_Usart = 1;
 }
 
 void fct_writeline1_USART1(char* Chaine)
 {
   int indice=0;
   
-  fct_loadchar_USART1(0xA1);
-  fct_loadchar_USART1(0x00);
-  fct_loadchar_USART1(0x01);
+  fct_loadvaleur_USART1(0xA1);
+  fct_loadvaleur_USART1(0x00);
+  fct_loadvaleur_USART1(0x01);
   
-  fct_loadchar_USART1(0xA2);
+  fct_loadvaleur_USART1(0xA2);
   
   while(indice!=strlen(Chaine))
   {
     fct_loadchar_USART1(Chaine[indice]);
     indice++;
   }
+  flag_Fin_Fct_Usart = 1;
 }
 
 void fct_writeline2_USART1(char* Chaine)
 {
   int indice=0;
   
-  fct_loadchar_USART1(0xA1);
-  fct_loadchar_USART1(0x00);
-  fct_loadchar_USART1(0x02);
+  fct_loadvaleur_USART1(0xA1);
+  fct_loadvaleur_USART1(0x00);
+  fct_loadvaleur_USART1(0x02);
   
-  fct_loadchar_USART1(0xA2);
+  fct_loadvaleur_USART1(0xA2);
   
   while(indice!=strlen(Chaine))
   {
     fct_loadchar_USART1(Chaine[indice]);
     indice++;
   }
+  flag_Fin_Fct_Usart = 1;
 }
