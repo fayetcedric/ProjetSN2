@@ -56,6 +56,11 @@ void fct_init_AIC()
 
 void fct_init_WatchDog()
 {
-  WD_CMD=CLK_WATCHDOG|
+  WD_CMD=CLK_WATCHDOG;
+}
+
+void fct_restart_WatchDog()
+{
+  WD_CR=WD_RSTKEY;
 }
 
