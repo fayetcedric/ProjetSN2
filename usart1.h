@@ -14,6 +14,6 @@ Fichier de descritpion usart1
 #include "constante.h"
 
 void fct_init_USART1(void); //Fonction d'initialisation de l'USART1
-void fct_start_USART1(void); //Fonction de démarrage de l'USART1
+void fct_loadchar_USART1(char Character); //Fonction de démarrage de l'USART1
 
 #endif
