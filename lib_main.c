@@ -9,7 +9,7 @@ Derniere modification:
 void  fct_init_VariablesGlobales()
 {
   flag_Telecommande_ReceptionCaractere = 0;
-  flag_LCD_CaractereRecu = 0;
+  flag_LCD_CaractereLoad = 0;
 
   //Initialement on affecte toutes les variables globales à zéro.
   value_Temperature=0;
