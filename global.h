@@ -8,8 +8,6 @@ Fichier contenant les variables et fonctions globales
 #ifndef __GLOBAL_H
 #define GLOBAL_H
 
-/* Fonctions globales : */
-
 /* Constantes globales : */
 extern int flag_Telecommande_Reception;
 extern int value_Telecommande;
