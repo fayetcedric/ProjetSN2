@@ -4,7 +4,11 @@
 #include "global.h"
 
 #include "lib_main.h"
- // GESTION APMC & usart 0!!!
+#include "datation.h"
+#include "USARTID.h"
+
+ // GESTION APMC
+ 
 void main(void)
 {
 	/* Initialisation */
