@@ -15,6 +15,7 @@ void main(void)
 	fct_init_AIC();
 	
 	fct_start_TimerDuMain();
+	fct_start_WatchDog();
 	
 	
 	/* Boucle de travail */
