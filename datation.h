@@ -11,7 +11,6 @@ Fichier de descritpion datation
 #include <91M55800.h>
 
 #include "global.h"
-#include "constante.h"
 
 void fct_init_RTC(void); //Fonction d'initialisation du RTC
 void fct_start_RTC(void); //Fonction de démarrage du RTC
