@@ -6,7 +6,7 @@ Derniere modification: le 12 février 2013 par Cédric Fayet
 
 #include"lib_main.h"
 
-void fct_restart_all()
+void fct_irq_restart_all()
 {
   AIC_IPR=(1<<1);
 }
@@ -60,6 +60,11 @@ void fct_init_AIC()
   AIC_IECR=(1<<TC0_ID);
   
   //watchdog:
+  AIC_SMR12=AIC_PRIOR|
+            AIC_SRCTYPE_INT_EDGE_TRIGGER;
+  AIC_SVR12(int)fct_irq_restart_all();
+  AIC_IECR=(1<<TC12_ID);
+  
 }
 
 void fct_init_WatchDog()
