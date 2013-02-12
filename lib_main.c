@@ -14,7 +14,7 @@ void fct_restart_all()
 void fct_init_VariablesGlobales()
 {
   flag_Telecommande_ReceptionCaractere = 0;
-  flag_LCD_CaractereLoad = 0;
+  flag_Fin_Fct_Usart = 0;
 
   //Initialement on affecte toutes les variables globales à zéro.
   value_Temperature=0;
