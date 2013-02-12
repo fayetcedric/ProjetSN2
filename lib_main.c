@@ -32,15 +32,6 @@ void fct_init_TimerDuMain()
     TC0_IER=TC_CPCS;
 }
 
-void fct_init_AIC()
-{
-  AIC_SMR6=AIC_PRIOR|
-           AIC_SRCTYPE_INT_EDGE_TRIGGER;
-           
-  AIC_SVR6=(int)fct_irq_IncremCptTimer0;
-  AIC_IECR=(1<<TC0_ID);
-}
-
 void fct_start_TimerDuMain()
 {
   TC0_CCR=TC_CLKEN|
