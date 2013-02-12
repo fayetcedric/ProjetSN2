@@ -52,11 +52,14 @@ void fct_irq_IncremCptTimer0()
 
 void fct_init_AIC()
 {
+  // timer 0 :
   AIC_SMR6=AIC_PRIOR|
            AIC_SRCTYPE_INT_EDGE_TRIGGER;
            
   AIC_SVR6=(int)fct_irq_IncremCptTimer0;
   AIC_IECR=(1<<TC0_ID);
+  
+  //watchdog:
 }
 
 void fct_init_WatchDog()
@@ -67,7 +70,7 @@ void fct_init_WatchDog()
           
   WD_CMD=CLK_WATCHDOG;// intialize the clk
   
-}
+}// OKEY 
 
 void fct_restart_WatchDog()
 {
