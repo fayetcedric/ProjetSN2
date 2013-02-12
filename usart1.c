@@ -21,7 +21,7 @@ void fct_init_USART1(void)
 
 void fct_loadchar_USART1(char Character)
 {
-  US1_TPR = (int) Character;
-  flag_LCD_CaractereLoad = !((US1_CSR & us_TXRDY)>>1);
+  US1_THR = (int) Character;
+  flag_LCD_CaractereLoad = !((US1_CSR & US_TXRDY)>>1);
 }
 
