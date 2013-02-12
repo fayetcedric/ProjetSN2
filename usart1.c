@@ -21,17 +21,13 @@ void fct_init_USART1(void)
 
 void _fct_loadchar_USART1(char Character)
 {
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
+  while(!(US1_CSR & US_ENDTX));
   US1_THR = (int) Character;
 }
 
 void _fct_loadvaleur_USART1(int Valeur)
 {
-  while(!((US1_CSR & US_ENDTX)>>4))
-  {
-  }
+  while(!(US1_CSR & US_ENDTX));
   US1_THR = Valeur;
 }
 
