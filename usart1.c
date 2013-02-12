@@ -19,7 +19,9 @@ void fct_init_USART1(void)
           |US_CHMODE_NORMAL;
 }
 
-void fct_start_USART1(void)
+void fct_loadchar_USART1(char Character)
 {
+  US1_TPR = (int) Character;
+  flag_LCD_CaractereRecu = !((US1_CSR & us_TXRDY)>>1);
 }
 
