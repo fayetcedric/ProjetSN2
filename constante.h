@@ -14,5 +14,6 @@ Fichier contenant les différentes constantes pré-processeur
 #define TIMER0_PERIOD_CALCVENT 12// nb de période où on calcul vent
 
 #define CLK_WATCHDOG WD_WDCLKS_MCK4096 //horloge du watchdog
+#define INIVALUE_WATCHDOG 15 //le nombre de tic est codé sur 2^15, il compte  2^11 valeurs + INITVALUE_WATCHDOG (sur 4bits) * 2^12
 
 #endif
