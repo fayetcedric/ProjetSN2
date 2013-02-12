@@ -32,7 +32,7 @@ void fct_loadvaleur_USART1(int Valeur)
   while(!((US1_CSR & US_ENDTX)>>4))
   {
   }
-  US1_THR = (int) Character;
+  US1_THR = Valeur;
 }
 
 void fct_initscreen_USART1(void)
@@ -54,7 +54,7 @@ void fct_writeline1_USART1(char* Chaine)
   
   fct_loadvaleur_USART1(0xA1);
   fct_loadvaleur_USART1(0x00);
-  fct_loadvaleur_USART1(0x01);
+  fct_loadvaleur_USART1(0x00);
   
   fct_loadvaleur_USART1(0xA2);
   
@@ -75,7 +75,7 @@ void fct_writeline2_USART1(char* Chaine)
   
   fct_loadvaleur_USART1(0xA1);
   fct_loadvaleur_USART1(0x00);
-  fct_loadvaleur_USART1(0x02);
+  fct_loadvaleur_USART1(0x01);
   
   fct_loadvaleur_USART1(0xA2);
   
@@ -85,6 +85,19 @@ void fct_writeline2_USART1(char* Chaine)
     indice++;
   }
   
+  fct_loadvaleur_USART1(0x00);
+  
+  flag_Fin_Fct_Usart = 1;
+}
+
+void fct_write_USART1(char Character, int Ligne, int Colonne)
+{
+  fct_loadvaleur_USART1(0xA1);
+  fct_loadvaleur_USART1(Colonne);
+  fct_loadvaleur_USART1(Ligne);
+
+  fct_loadvaleur_USART1(0xA2);
+  fct_loadchar_USART1(Character);
   fct_loadvaleur_USART1(0x00);
   
   flag_Fin_Fct_Usart = 1;
