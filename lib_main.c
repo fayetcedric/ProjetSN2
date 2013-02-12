@@ -56,6 +56,6 @@ void fct_init_AIC()
 
 void fct_init_WatchDog()
 {
-  
+  WD_CMD=CLK_WATCHDOG|
 }
 
